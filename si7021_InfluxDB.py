@@ -12,15 +12,15 @@ i2c = busio.I2C(board.SCL, board.SDA)
 sensor = adafruit_si7021.SI7021(i2c)
 
 # You can generate a Token from the "Tokens Tab" in the UI
-token = "NxTj-aa1aEj5vr6I32yh3n2fpItqmjfALxCD8SsorIgoMpFA05Br_8LVQvAwN47joakfnbvY9LcdzAU-KGPirw=="
-org = "databyben"
-bucket = "si7021sensor"
+token = "<Your Token Goes Here>"
+org = "<Your Organization Goes Here>"
+bucket = "<Your Data Bucket Goes Here>"
 
 # Variables
 temperature = 0.0
 relative_humidity = 0.0
 
-client = InfluxDBClient(url="http://192.168.1.181:8086", token=token)
+client = InfluxDBClient(url="http://localhost:8086", token=token)
 
 write_api = client.write_api(write_options=SYNCHRONOUS)
 
