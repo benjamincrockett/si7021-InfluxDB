@@ -33,3 +33,6 @@ Start InfluxDB using the command
 influxd
 
 Open a web browser and go to localhost:8086
+
+export INFLUX_TOKEN=YourAuthenticationToken
+Use INFLUX_TOKEN in place of token in code.
